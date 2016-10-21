@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const dllManifest = require('./dll/vendor-manifest.json');
 
 module.exports = {
-    entry: './app/index.js',
+    entry: path.join(__dirname, '/app/', 'index.js'),
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'build.js',
@@ -23,7 +25,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './app/index.html',
+            template: path.join(__dirname, '/app/', 'index.html'),
+        }),
+
+        new webpack.DllReferencePlugin({
+            context: path.join(__dirname, 'app'),
+            manifest: dllManifest,
         }),
     ],
 };
