@@ -9,7 +9,8 @@
     "build": "npm run build:dll && webpack",
     "build:dll": "webpack --config webpack.dll.config.js",
     "serve": "http-server dist",
-    "lint": "eslint app/*.js webpack.*.js"
+    "lint": "eslint app/*.js webpack.*.js",
+    "start": "npm run build && npm run serve"
   },
   "keywords": [],
   "author": "",
