@@ -12,7 +12,12 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
+                include: path.join(__dirname, '/app/'),
                 exclude: /node_modules/,
+                query: {
+                    cacheDirectory: true,
+                    presets: ["es2015", "react"]
+                }
             },
         ],
     },
