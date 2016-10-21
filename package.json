@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack",
-    "serve": "http-server dist"
+    "build": "npm run build:dll && webpack",
+    "build:dll": "webpack --config webpack.dll.config.js",
+    "serve": "http-server dist",
+    "lint": "eslint app/*.js webpack.*.js"
   },
   "keywords": [],
   "author": "",
