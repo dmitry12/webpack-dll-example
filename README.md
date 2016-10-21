@@ -1,6 +1,6 @@
 # Webpack dll example
 
-Minimal working solution by extracting vendor files and using DLL plugin for increasing webpack build time.
+Minimal working solution by extracting vendor files and using DLL plugin for improving webpack build time.
 
 ## Install:
 ```
