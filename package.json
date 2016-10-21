@@ -27,6 +27,8 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "d3": "^4.2.8",
+    "lodash": "^4.16.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   }
